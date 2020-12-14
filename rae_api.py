@@ -43,7 +43,7 @@ def create_arguments(word):
     return status, {
         "word": {
             "name": word,
-            "definitions_arguments": definitions
+            "definitions_attributes": definitions
         }
     }
 

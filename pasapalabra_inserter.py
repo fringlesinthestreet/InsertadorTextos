@@ -7,6 +7,7 @@ URL = 'http://localhost:3000/api/v1/words'
 def insert_into_api(word):
     result, arguments = create_arguments(word)
     if result:
+      print(arguments)
       r = requests.post(URL, json=arguments)
       status_code = r.status_code          
       if status_code == 422 or status_code == 500:
@@ -17,9 +18,7 @@ def insert_into_api(word):
     return False, None, None
 
 if __name__ == '__main__':
-    print(insert_into_api('ñublenses'))
-    print(insert_into_api('ñachi'))
-    print(insert_into_api('ñata'))
+    print(insert_into_api('kilométrico'))
     '''
     r = requests.post(URL, json={
         "word": {
